@@ -1,0 +1,14 @@
+#FROM node:18-alpine as build
+#WORKDIR /app
+#COPY package*.json ./
+#RUN npm install --frozen-lockfile
+#RUN npm install vite 
+#COPY . .
+#RUN npm prune --production
+
+#FROM node:18-alpine as dev
+#WORKDIR /app
+#COPY --from=build /app .
+#EXPOSE 5173
+#ENV NODE_ENV=development
+#CMD ["npm", "run", "dev"]
